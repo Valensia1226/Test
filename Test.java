@@ -42,24 +42,7 @@ public class Test {
         catch (Exception e) {
             System.out.println("Что то пошло не так");
         }
-    }
-    
-  public static void BubbleSort(int[] array) {
-        int temp = 0;
-        boolean flag = true;
-        while (flag == true) {
-            flag = false;
-            arrayToFile(array);
-            for (int i = 1; i < array.length; i++) {
-                if (array[i] < array[i - 1]) {
-                    temp = array[i - 1];
-                    array[i - 1] = array[i];
-                    array[i] = temp;
-                    flag = true;
-                }
-            }
-        }
-    }
+    }    
     
   public static String ReadFromFile() {
         File file = new File("school.txt");
@@ -153,10 +136,6 @@ public class Test {
         //Task1
         String dataInput = "{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"}";
         System.out.println(Request(dataInput));
-
-        //Task2
-        int[] array = {3, 4, 6, 8, 1};
-        BubbleSort(array);
 
         //Task3
         Students();
